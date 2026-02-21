@@ -23,12 +23,13 @@ Set `NEXT_PUBLIC_API_URL=http://127.0.0.1:8000` in `frontend/.env.local` (option
 
 ## Deploy to Vercel
 
-1. Go to [vercel.com](https://vercel.com) and sign in (e.g. with GitHub).
-2. **Add New Project** → Import **chaitanyakukreja/huntspointlogisticsplatform**.
-3. Set **Root Directory** to `frontend` (Edit → set to `frontend`).
-4. Leave **Build Command** as `npm run build` and **Output Directory** as default.
-5. (Optional) Add env var `NEXT_PUBLIC_API_URL` = your hosted API URL if you deploy the backend elsewhere.
-6. Deploy. The app works with built-in sample data if no API URL is set.
+**Important:** Set **Root Directory** to **`frontend`** in Vercel (Settings → General → Root Directory). Otherwise Vercel will try to build the Python API and fail with "No fastapi entrypoint found".
+
+1. Go to [vercel.com](https://vercel.com) → Add New Project → Import **chaitanyakukreja/huntspointlogisticsplatform**.
+2. **Before deploying:** Settings → General → **Root Directory** → set to **`frontend`** → Save.
+3. Deploy. Build Command stays `npm run build`, Output Directory default.
+4. (Optional) Add env var `NEXT_PUBLIC_API_URL` if you host the backend elsewhere.
+5. See [DEPLOY.md](./DEPLOY.md) if you already see the FastAPI error.
 
 ## Deploy backend (optional)
 
