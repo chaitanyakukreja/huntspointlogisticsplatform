@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #fafafa;
+  --foreground: #171717;
+  --panel: #ffffff;
+  --border: #e5e5e5;
+  --accent: #0f766e;
+  --accent-hover: #0d9488;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #fafafa;
+    --panel: #171717;
+    --border: #262626;
+    --accent: #2dd4bf;
+    --accent-hover: #5eead4;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+.transition-smooth {
+  @apply transition-all duration-300 ease-out;
+}
